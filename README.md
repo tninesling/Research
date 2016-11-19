@@ -3,6 +3,10 @@
 Author: Taylor Ninesling
 
 ### Package overview: ###
+This package was created as part of an ongoing research project in the Hofstra
+Computer Science department involving NLP and text summarization/comparison
+techniques.
+
 This package contains classes to:
 1) Serialize and Deserialize Sports Data to and from JSON
 2) Parse the Category_Coding.xlsx spreadsheet and add categories to existing
