@@ -1,0 +1,9 @@
+[0m[[0minfo[0m] [0m[32mFinalSportTemplateNameNormalizerSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mA group name with section number[0m[0m
+[0m[[0minfo[0m] [0m[32m- should match with [A-Z]?[A-Z]\d[0m[0m
+[0m[[0minfo[0m] [0m[32mThe substring beginning with the group name[0m[0m
+[0m[[0minfo[0m] [0m[32m- should match [A-Z]?[A-Z]\d(\S||\s)*[0m[0m
+[0m[[0minfo[0m] [0m[32mThe substring ending with the section number[0m[0m
+[0m[[0minfo[0m] [0m[32m- should match (\S||\s)*[A-Z]?[A-Z]\d[0m[0m
+[0m[[0minfo[0m] [0m[32mThe final group name and number extraction[0m[0m
+[0m[[0minfo[0m] [0m[32m- should match [A-Z]?[A-Z]\d[0m[0m

@@ -1,0 +1,5 @@
+[0m[[0minfo[0m] [0m[32mFinalTemplateSerDeSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mThe getSectionContent method[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be successful for a valid group[0m[0m
+[0m[[0minfo[0m] [0m[32mThe parseFinalTemplatesFromDirectory[0m[0m
+[0m[[0minfo[0m] [0m[32m- should return a valid array of templates[0m[0m
