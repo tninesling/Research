@@ -10,6 +10,7 @@ import serde.models.LemmatizedTokenData;
 import serde.models.PostUserTimeAndCategory;
 import serde.models.SportsData;
 import spellChecker.SpellChecker;
+import termcounter.TermCounter;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -38,6 +39,7 @@ public class Main {
   private static String finalSportTemplateLocation = "C:\\Users\\Taylor\\Research\\data\\FinalTemplates\\";
   private static String finalSportTextLocation = "C:\\Users\\Taylor\\Research\\data\\FinalSportText\\";
   private static String finalSportJsonLocation = "C:\\Users\\Taylor\\Research\\data\\FinalSportJson\\";
+  private static String termCountLocation = "C:\\Users\\Taylor\\Research\\data\\TermCount\\";
 
   public static String[] groupNames = {"A", "AA", "AB", "AC", "AD", "AE", "AF",
           "AG", "AH", "AI", "AK", "AM", "AN", "AR", "AT", "AV", "AX", "AY", "B",
@@ -77,6 +79,12 @@ public class Main {
                                  finalSportTextLocation,
                                  finalSportJsonLocation };
         finalSportMain(newArgs);
+        break;
+      }
+      case "termCounter": {
+        newArgs = new String[] { lemmatizedDataDirectoryLocation,
+                                 termCountLocation };
+        termCounterMain(newArgs);
         break;
       }
       default: {
@@ -186,6 +194,12 @@ public class Main {
             serde.parseFinalTemplatesFromDirectory(textTemplateLocation, groupName));
       writeJsonToLocation(templateJson, jsonTemplateLocation + groupName + "_template.json");
     }
+  }
+
+  public static void termCounterMain(String[] args) {
+    String termCountJson = TermCounter.main(args);
+    String termCountLocation = args[1];
+    writeJsonToLocation(termCountJson, termCountLocation + "termCount.json");
   }
 
   public static void setLogger(String logLocation) {

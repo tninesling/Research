@@ -498,3 +498,6 @@ Oct 25, 2016 1:08:42 AM Main categorizerMain
 INFO: 2 corrections made for group Y
 Oct 25, 2016 1:08:43 AM Main categorizerMain
 INFO: 2 corrections made for group Z
+Nov 19, 2016 8:46:01 PM Main writeJsonToLocation
+SEVERE: Error writing json to file at C:\Users\Taylor\Research\data\TermCount\:
+java.io.FileNotFoundException: C:\Users\Taylor\Research\data\TermCount (Access is denied)
