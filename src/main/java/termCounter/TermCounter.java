@@ -4,6 +4,7 @@ import serde.CountWordSerDe;
 import serde.SportsJsonSerDe;
 import serde.models.CountWord;
 import serde.models.LemmatizedTokenData;
+import serde.models.TermFrequencyData;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -12,33 +13,43 @@ import java.util.HashMap;
 import java.util.List;
 
 public class TermCounter {
-  public static String main(String[] args) {
-    String lemmatizedDataLocation = args[0];
-    File directory = new File(lemmatizedDataLocation);
-    HashMap<String,Integer> hash = new HashMap<String,Integer>();
+  public static String getTermFrequencyData(String lemmatizedDataLocation) {
+    SportsJsonSerDe sportsJsonSerDe = new SportsJsonSerDe();
 
-    for (String fileName : directory.list()) {
-      SportsJsonSerDe sportsJsonSerDe = new SportsJsonSerDe();
-      LemmatizedTokenData[] tokenArray = new LemmatizedTokenData[0];
-      tokenArray = sportsJsonSerDe.parseSportsJson(lemmatizedDataLocation + fileName, tokenArray);
+    LemmatizedTokenData[] tokenArray = new LemmatizedTokenData[0];
+    tokenArray = sportsJsonSerDe.parseSportsJson(lemmatizedDataLocation, tokenArray);
 
-      for (LemmatizedTokenData datum : tokenArray) {
-        countTerms(hash, datum);
-      }
+    TermFrequencyData[] frequencyArray = new TermFrequencyData[tokenArray.length];
+
+    for (int i = 0; i < tokenArray.length; i++) {
+      HashMap<String,Integer> hash = new HashMap<String,Integer>();
+
+      countTerms(hash, tokenArray[i]);
+      List<CountWord> countWordsList = buildCountWordListFromHashMap(hash);
+
+      frequencyArray[i] = new TermFrequencyData(tokenArray[i]);
+      frequencyArray[i].setTermFrequencyList(countWordsList);
     }
 
-    List<CountWord> countWordsList = buildCountWordListFromHashMap(hash);
-    Collections.sort(countWordsList); // sorts in ascending order
-    Collections.reverse(countWordsList);
-    return CountWordSerDe.countWordsToJson(countWordsList.toArray(new CountWord[0]));
+    return sportsJsonSerDe.sportsDataToJson(frequencyArray);
   }
 
   public static void countTerms(HashMap<String,Integer> countHash, LemmatizedTokenData data) {
     ArrayList<String> terms = new ArrayList<String>();
+    
     for (List<String> lemmaTagPair : data.getTaggedUnigramTokens()) {
       terms.add(lemmaTagPair.get(0));
     }
-    for (String term : terms) {
+
+    for (List<String> lemmaTagPair : data.getTaggedMultigramTokens()) {
+      terms.add(lemmaTagPair.get(0));
+    }
+
+    countTermsInList(countHash, terms);
+  }
+
+  private static void countTermsInList(HashMap<String,Integer> countHash, List<String> list) {
+    for (String term : list) {
       Integer count = countHash.get(term);
       if (count == null) {
         countHash.put(term, 1);

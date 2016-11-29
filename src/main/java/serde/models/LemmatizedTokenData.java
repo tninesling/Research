@@ -22,6 +22,7 @@ public class LemmatizedTokenData extends CategorizedSportsData {
     this.sessionID = existingData.getSessionID();
     this.category = existingData.getCategory();
     this.taggedUnigramTokens = null;
+    this.taggedMultigramTokens = null;
   }
 
   public List<List<String>> getTaggedUnigramTokens() {

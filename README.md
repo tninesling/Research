@@ -13,6 +13,7 @@ This package contains classes to:
 Sports Data JSON
 3) Spell Check the content of Sports Data
 4) Tokenize, Lemmatize, and POS Tag the content for Sports Data
+5) Parse the Final Sport Templates to JSON
 These are meant to be used in this order.
 
 This package uses sbt for dependency management.

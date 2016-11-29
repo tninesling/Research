@@ -39,7 +39,7 @@ public class Main {
   private static String finalSportTemplateLocation = "C:\\Users\\Taylor\\Research\\data\\FinalTemplates\\";
   private static String finalSportTextLocation = "C:\\Users\\Taylor\\Research\\data\\FinalSportText\\";
   private static String finalSportJsonLocation = "C:\\Users\\Taylor\\Research\\data\\FinalSportJson\\";
-  private static String termCountLocation = "C:\\Users\\Taylor\\Research\\data\\TermCount\\";
+  private static String termCountLocation = "C:\\Users\\Taylor\\Research\\data\\TermFrequencyData\\";
 
   public static String[] groupNames = {"A", "AA", "AB", "AC", "AD", "AE", "AF",
           "AG", "AH", "AI", "AK", "AM", "AN", "AR", "AT", "AV", "AX", "AY", "B",
@@ -197,9 +197,13 @@ public class Main {
   }
 
   public static void termCounterMain(String[] args) {
-    String termCountJson = TermCounter.main(args);
+    String lemmatizedDataLocation = args[0];
     String termCountLocation = args[1];
-    writeJsonToLocation(termCountJson, termCountLocation + "termCount.json");
+
+    for (String groupName : groupNames) {
+      String termCountJson = TermCounter.getTermFrequencyData(lemmatizedDataLocation + groupName + "_lemmed.json");
+      writeJsonToLocation(termCountJson, termCountLocation + groupName + "_frequency.json");
+    }
   }
 
   public static void setLogger(String logLocation) {
