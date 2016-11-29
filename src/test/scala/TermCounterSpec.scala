@@ -19,14 +19,13 @@ class TermCounterSpec extends FlatSpec with Matchers {
     lemmatizedArray = sportsJsonSerDe.parseSportsJson(lemmatizedDataLocation, lemmatizedArray)
 
     val countWordSerDe = new CountWordSerDe()
-    val counter = new TermCounter()
     val hash = new HashMap[String,Integer]()
 
     lemmatizedArray.foreach {
-      counter.countTerms(hash, _)
+      TermCounter.countTerms(hash, _)
     }
 
-    val countWordsList = counter.buildCountWordListFromHashMap(hash)
+    val countWordsList = TermCounter.buildCountWordListFromHashMap(hash)
     //println(countWordSerDe.countWordsToJson(countWordsList.toArray(Array[CountWord]())))
   }
 }

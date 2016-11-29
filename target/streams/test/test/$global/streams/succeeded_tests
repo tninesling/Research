@@ -1,6 +1,6 @@
 #Successful Tests
-#Sat Nov 19 19:18:25 EST 2016
-tests.FinalTemplateSerDeSpec=1479601104986
-tests.TemplateNameFilterSpec=1479601104118
-tests.FinalSportTemplateNameNormalizerSpec=1479601104114
-tests.TermCounterSpec=1479601105157
+#Mon Nov 28 22:07:57 EST 2016
+tests.FinalTemplateSerDeSpec=1480388877690
+tests.TemplateNameFilterSpec=1480388877019
+tests.FinalSportTemplateNameNormalizerSpec=1480388877213
+tests.TermCounterSpec=1480388877722
