@@ -2,7 +2,7 @@ package serde.models;
 
 import java.util.List;
 
-public class LemmatizedTokenData extends CategorizedSportsData {
+public class LemmatizedTokenData extends CategorizedSportsData implements LemmatizedData {
   protected List<List<String>> taggedUnigramTokens;
   protected List<List<String>> taggedMultigramTokens;
 

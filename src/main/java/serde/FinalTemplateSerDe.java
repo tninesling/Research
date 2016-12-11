@@ -154,6 +154,21 @@ public class FinalTemplateSerDe {
     return template;
   }
 
+  public FinalTemplate[] parseFinalTemplateJsonArray(String jsonFileLocation) {
+    FinalTemplate[] templates = new FinalTemplate[0];
+    File jsonFile = new File(jsonFileLocation);
+    try {
+      mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
+      templates = mapper.readValue(jsonFile, FinalTemplate[].class);
+    } catch (JsonParseException jpe) {
+      jpe.printStackTrace();
+    } catch (IOException ioe) {
+      ioe.printStackTrace();
+    }
+
+    return templates;
+  }
+
   public String finalTemplateToJson(FinalTemplate template) {
     String mappedJsonString = "";
     try {

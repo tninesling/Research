@@ -83,4 +83,14 @@ public class FinalTemplate {
   public void setExtraComments(String extraComments) {
     this.extraComments = extraComments;
   }
+
+  // Returns the text value of the entire document concatenated together
+  public String content() {
+    String content = sportName + " " + numberOfPlayers + " " + objectsUsed + " ";
+    content += locationOfPlay + " " + durationOfPlay + " " + rulesOfPlay + " ";
+    content += pointSystem + " " + howToScore + " " + howToWin + " ";
+    content += extraComments;
+
+    return content;
+  }
 }

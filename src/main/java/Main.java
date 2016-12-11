@@ -1,14 +1,8 @@
-import categorizer.SportsExcelSheetParser;
-import categorizer.SportsJsonCategorizer;
-import finalSportTemplate.FinalSportTemplateParser;
-import finalSportTemplate.TemplateNameFilter;
-import nlp.ContentProcessor;
-import serde.FinalTemplateSerDe;
-import serde.SportsJsonSerDe;
-import serde.models.CategorizedSportsData;
-import serde.models.LemmatizedTokenData;
-import serde.models.PostUserTimeAndCategory;
-import serde.models.SportsData;
+import categorizer.*;
+import finalSportTemplate.*;
+import nlp.*;
+import serde.*;
+import serde.models.*;
 import spellChecker.SpellChecker;
 import termcounter.TermCounter;
 
@@ -40,6 +34,7 @@ public class Main {
   private static String finalSportTextLocation = "C:\\Users\\Taylor\\Research\\data\\FinalSportText\\";
   private static String finalSportJsonLocation = "C:\\Users\\Taylor\\Research\\data\\FinalSportJson\\";
   private static String termCountLocation = "C:\\Users\\Taylor\\Research\\data\\TermFrequencyData\\";
+  private static String termCountTemplateLocation = "C:\\Users\\Taylor\\Research\\data\\TermFrequencyTemplates\\";
 
   public static String[] groupNames = {"A", "AA", "AB", "AC", "AD", "AE", "AF",
           "AG", "AH", "AI", "AK", "AM", "AN", "AR", "AT", "AV", "AX", "AY", "B",
@@ -79,6 +74,12 @@ public class Main {
                                  finalSportTextLocation,
                                  finalSportJsonLocation };
         finalSportMain(newArgs);
+        break;
+      }
+      case "finalSportLemmatizeCount": {
+        newArgs = new String[] { finalSportJsonLocation,
+                                 termCountTemplateLocation };
+        finalSportLemmatizeAndCount(newArgs);
         break;
       }
       case "termCounter": {
@@ -193,6 +194,20 @@ public class Main {
       String templateJson = serde.finalTemplateArrayToJson(
             serde.parseFinalTemplatesFromDirectory(textTemplateLocation, groupName));
       writeJsonToLocation(templateJson, jsonTemplateLocation + groupName + "_template.json");
+    }
+  }
+
+  public static void finalSportLemmatizeAndCount(String[] args) {
+    String finalSportLocation = args[0];
+    String termCountTemplateLocation = args[1];
+
+    FinalTemplateSerDe serde = new FinalTemplateSerDe();
+
+    for (String groupName : groupNames) {
+      LemmatizedFinalTemplate[] lemmedTemplates = FinalSportTemplateLemmatizer.lemmatizeTemplatesFromFile(finalSportLocation + groupName + "_template.json");
+      TermFrequencyTemplate[] countedTemplates = TermCounter.getTermFrequencyTemplates(lemmedTemplates);
+      String templateJson = serde.finalTemplateArrayToJson(countedTemplates);
+      writeJsonToLocation(templateJson, termCountTemplateLocation + groupName + "_frequency.json");
     }
   }
 
