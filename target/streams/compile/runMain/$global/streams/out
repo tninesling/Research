@@ -1,5 +1,1 @@
-[0m[[0minfo[0m] [0mRunning Main finalSportLemmatizeCount[0m
-[0m[[31merror[0m] [0mSLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".[0m
-[0m[[31merror[0m] [0mSLF4J: Defaulting to no-operation (NOP) logger implementation[0m
-[0m[[31merror[0m] [0mSLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.[0m
-[0m[[31merror[0m] [0mReading POS tagger model from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... done [3.5 sec].[0m
+[0m[[0minfo[0m] [0mRunning Main termCounter[0m

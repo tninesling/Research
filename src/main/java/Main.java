@@ -14,7 +14,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
@@ -215,10 +217,15 @@ public class Main {
     String lemmatizedDataLocation = args[0];
     String termCountLocation = args[1];
 
+    HashMap<String,Integer> globalHash = new HashMap<String,Integer>();
+
     for (String groupName : groupNames) {
-      String termCountJson = TermCounter.getTermFrequencyData(lemmatizedDataLocation + groupName + "_lemmed.json");
+      String termCountJson = TermCounter.getTermFrequencyData(lemmatizedDataLocation + groupName + "_lemmed.json", globalHash);
       writeJsonToLocation(termCountJson, termCountLocation + groupName + "_frequency.json");
     }
+
+    List<RankedCountWord> rankedList = TermCounter.rankCountWords(TermCounter.buildCountWordListFromHashMap(globalHash));
+    writeJsonToLocation(TermCounter.rankedListToJson(rankedList), termCountLocation + "ranked_vocab.json");
   }
 
   public static void setLogger(String logLocation) {

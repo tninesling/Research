@@ -2,12 +2,8 @@ package termcounter;
 
 import serde.CountWordSerDe;
 import serde.SportsJsonSerDe;
-import serde.models.CountWord;
-import serde.models.LemmatizedData;
-import serde.models.LemmatizedFinalTemplate;
-import serde.models.LemmatizedTokenData;
-import serde.models.TermFrequencyData;
-import serde.models.TermFrequencyTemplate;
+import serde.models.*;
+import termFilter.TermFilter;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -21,11 +17,12 @@ public class TermCounter {
    * TermFrequencyData objects is built from an array of LemmatizedTokenData
    * which is parsed from the lemmatizedDataLocation
    */
-  public static String getTermFrequencyData(String lemmatizedDataLocation) {
+  public static String getTermFrequencyData(String lemmatizedDataLocation, HashMap<String,Integer> globalHash) {
     SportsJsonSerDe sportsJsonSerDe = new SportsJsonSerDe();
 
     LemmatizedTokenData[] tokenArray = new LemmatizedTokenData[0];
     tokenArray = sportsJsonSerDe.parseSportsJson(lemmatizedDataLocation, tokenArray);
+    TermFilter.filterLemmatizedData(tokenArray);
 
     TermFrequencyData[] frequencyArray = new TermFrequencyData[tokenArray.length];
 
@@ -33,6 +30,7 @@ public class TermCounter {
       HashMap<String,Integer> hash = new HashMap<String,Integer>();
 
       countTerms(hash, tokenArray[i]);
+      countTerms(globalHash, tokenArray[i]);
       List<CountWord> countWordsList = buildCountWordListFromHashMap(hash);
 
       frequencyArray[i] = new TermFrequencyData(tokenArray[i]);
@@ -92,5 +90,21 @@ public class TermCounter {
       wordCountList.add(currentWord);
     }
     return wordCountList;
+  }
+
+  public static List<RankedCountWord> rankCountWords(List<CountWord> countWords) {
+    Collections.sort(countWords);
+    Collections.reverse(countWords);
+    ArrayList<RankedCountWord> rankedList = new ArrayList<RankedCountWord>();
+    for (int i = 0; i < countWords.size(); i++) {
+      RankedCountWord newRankedWord = new RankedCountWord(countWords.get(i));
+      newRankedWord.setRank(i);
+      rankedList.add(newRankedWord);
+    }
+    return rankedList;
+  }
+
+  public static String rankedListToJson(List<RankedCountWord> rankedList) {
+    return CountWordSerDe.countWordsToJson(rankedList.toArray(new RankedCountWord[0]));
   }
 }
