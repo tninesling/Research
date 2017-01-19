@@ -104,6 +104,35 @@ public class TermCounter {
     return rankedList;
   }
 
+  public static List<PostCountRankedCountWord> updateRankedVocab(List<RankedCountWord> vocab, TermFrequencyMatrix matrix) {
+    HashMap<Integer,Integer> rankedTermHash = new HashMap<Integer,Integer>();
+
+    for (List<List<String>> row : matrix.getRows()) {
+      // For each term in the post (row), increment the count in the HashMap
+      for (List<String> entry : row) {
+        Integer termRank = Integer.parseInt(entry.get(2));
+
+        // Increment the count for number of posts the term appears in
+        Integer numberOfPosts = rankedTermHash.get(termRank);
+        if (numberOfPosts == null) {
+          rankedTermHash.put(termRank, 1);
+        } else {
+          rankedTermHash.put(termRank, numberOfPosts + 1);
+        }
+      }
+    }
+
+    List<PostCountRankedCountWord> updatedVocab = new ArrayList<PostCountRankedCountWord>();
+
+    for (RankedCountWord term : vocab) {
+      PostCountRankedCountWord nextTerm = new PostCountRankedCountWord(term);
+      nextTerm.setNumberOfPosts(rankedTermHash.get(term.getRank()));
+      updatedVocab.add(nextTerm);
+    }
+
+    return updatedVocab;
+  }
+
   public static String rankedListToJson(List<RankedCountWord> rankedList) {
     return CountWordSerDe.countWordsToJson(rankedList.toArray(new RankedCountWord[0]));
   }

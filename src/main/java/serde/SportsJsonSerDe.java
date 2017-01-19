@@ -3,6 +3,7 @@ package serde;
 import serde.models.CategorizedSportsData;
 import serde.models.LemmatizedTokenData;
 import serde.models.SportsData;
+import serde.models.TermFrequencyData;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParseException;
@@ -47,6 +48,22 @@ public class SportsJsonSerDe {
 
     return outArray;
   }
+
+  public TermFrequencyData[] parseSportsJson(String jsonFileLocation, TermFrequencyData[] outArray) {
+    File jsonFile = new File(jsonFileLocation);
+    try {
+      mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
+      // Read JSON from the file location into an instance of the dynamic class of outArray
+      outArray = mapper.readValue(jsonFile, outArray.getClass());
+    } catch (JsonParseException jpe) {
+      jpe.printStackTrace();
+    } catch (IOException ioe) {
+      ioe.printStackTrace();
+    }
+
+    return outArray;
+  }
+
 
   public String sportsDataToJson(SportsData[] sportsDataArray) {
     String mappedJsonString = "";

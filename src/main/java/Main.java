@@ -37,6 +37,7 @@ public class Main {
   private static String finalSportJsonLocation = "C:\\Users\\Taylor\\Research\\data\\FinalSportJson\\";
   private static String termCountLocation = "C:\\Users\\Taylor\\Research\\data\\TermFrequencyData\\";
   private static String termCountTemplateLocation = "C:\\Users\\Taylor\\Research\\data\\TermFrequencyTemplates\\";
+  private static String rankedVocabLocation = "C:\\Users\\Taylor\\Research\\data\\RankedVocab\\";
 
   public static String[] groupNames = {"A", "AA", "AB", "AC", "AD", "AE", "AF",
           "AG", "AH", "AI", "AK", "AM", "AN", "AR", "AT", "AV", "AX", "AY", "B",
@@ -86,8 +87,20 @@ public class Main {
       }
       case "termCounter": {
         newArgs = new String[] { lemmatizedDataDirectoryLocation,
-                                 termCountLocation };
+                                 termCountLocation,
+                                 rankedVocabLocation };
         termCounterMain(newArgs);
+        break;
+      }
+      case "matrixBuilder": {
+        newArgs = new String[] { termCountLocation,
+                                 rankedVocabLocation };
+        buildMatrix(newArgs);
+        break;
+      }
+      case "updateVocab": {
+        newArgs = new String[] { rankedVocabLocation, rankedVocabLocation };
+        addNumberOfPostsToVocabulary(newArgs);
         break;
       }
       default: {
@@ -216,6 +229,7 @@ public class Main {
   public static void termCounterMain(String[] args) {
     String lemmatizedDataLocation = args[0];
     String termCountLocation = args[1];
+    String rankedVocabLocation = args[2];
 
     HashMap<String,Integer> globalHash = new HashMap<String,Integer>();
 
@@ -225,7 +239,41 @@ public class Main {
     }
 
     List<RankedCountWord> rankedList = TermCounter.rankCountWords(TermCounter.buildCountWordListFromHashMap(globalHash));
-    writeJsonToLocation(TermCounter.rankedListToJson(rankedList), termCountLocation + "ranked_vocab.json");
+    writeJsonToLocation(TermCounter.rankedListToJson(rankedList), rankedVocabLocation + "ranked_vocab.json");
+  }
+
+  public static void buildMatrix(String[] args) {
+    String termCountLocation = args[0];
+    String rankedVocabLocation = args[1];
+
+    TermFrequencyMatrix matrix = new TermFrequencyMatrix();
+    SportsJsonSerDe serde = new SportsJsonSerDe();
+    CountWordSerDe cserde = new CountWordSerDe();
+    TermFrequencyMatrixSerDe mserde = new TermFrequencyMatrixSerDe();
+
+    List<RankedCountWord> vocab = Arrays.asList(cserde.parseCountWordJson(rankedVocabLocation + "ranked_vocab.json", new RankedCountWord[0]));
+
+    for (String groupName : groupNames) {
+      TermFrequencyData[] data = serde.parseSportsJson(termCountLocation + groupName + "_frequency.json", new TermFrequencyData[0]);
+      matrix.addData(vocab, groupName, data);
+    }
+
+    writeJsonToLocation(mserde.termFrequencyMatrixToJson(matrix), rankedVocabLocation + "term_matrix.json");
+  }
+
+  public static void addNumberOfPostsToVocabulary(String[] args) {
+    String rankedVocabLocation = args[0];
+    String termMatrixLocation = args[1];
+
+    CountWordSerDe cserde = new CountWordSerDe();
+    TermFrequencyMatrixSerDe mserde = new TermFrequencyMatrixSerDe();
+
+    List<RankedCountWord> vocab = Arrays.asList(cserde.parseCountWordJson(rankedVocabLocation + "ranked_vocab.json", new RankedCountWord[0]));
+    TermFrequencyMatrix matrix = mserde.parseTermFrequencyMatrixJson(termMatrixLocation + "term_matrix.json");
+
+    List<PostCountRankedCountWord> updatedVocab = TermCounter.updateRankedVocab(vocab, matrix);
+
+    writeJsonToLocation(cserde.countWordsToJson(updatedVocab.toArray(new PostCountRankedCountWord[0])), rankedVocabLocation + "num_posts_vocab.json");
   }
 
   public static void setLogger(String logLocation) {

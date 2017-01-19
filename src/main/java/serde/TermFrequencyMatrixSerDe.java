@@ -1,7 +1,6 @@
 package serde;
 
-import serde.models.CountWord;
-import serde.models.RankedCountWord;
+import serde.models.TermFrequencyMatrix;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParseException;
@@ -12,44 +11,31 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import java.io.File;
 import java.io.IOException;
 
-public class CountWordSerDe {
+public class TermFrequencyMatrixSerDe {
   private static ObjectMapper mapper = new ObjectMapper();
 
-  public static CountWord[] parseCountWordJson(String jsonFileLocation, CountWord[] outArray) {
+  public static TermFrequencyMatrix parseTermFrequencyMatrixJson(String jsonFileLocation) {
     File jsonFile = new File(jsonFileLocation);
+    TermFrequencyMatrix outVal = new TermFrequencyMatrix();
     try {
       mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
-      outArray = mapper.readValue(jsonFile, outArray.getClass());
+      outVal = mapper.readValue(jsonFile, outVal.getClass());
     } catch (JsonParseException jpe) {
       jpe.printStackTrace();
     } catch (IOException ioe) {
       ioe.printStackTrace();
     }
 
-    return outArray;
+    return outVal;
   }
 
-  public static RankedCountWord[] parseCountWordJson(String jsonFileLocation, RankedCountWord[] outArray) {
-    File jsonFile = new File(jsonFileLocation);
-    try {
-      mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
-      outArray = mapper.readValue(jsonFile, outArray.getClass());
-    } catch (JsonParseException jpe) {
-      jpe.printStackTrace();
-    } catch (IOException ioe) {
-      ioe.printStackTrace();
-    }
-
-    return outArray;
-  }
-
-  public static String countWordsToJson(CountWord[] countWordArray) {
+  public static String termFrequencyMatrixToJson(TermFrequencyMatrix matrix) {
     String mappedJsonString = "";
     try {
       mapper.enable(SerializationFeature.INDENT_OUTPUT);
       mapper.configure(JsonGenerator.Feature.ESCAPE_NON_ASCII, true);
-      // Write array as indented JSON string value
-      mappedJsonString = mapper.writeValueAsString(countWordArray);
+      // Write matrix as indented JSON string value
+      mappedJsonString = mapper.writeValueAsString(matrix);
     } catch (IOException ioe) {
       ioe.printStackTrace();
     }
