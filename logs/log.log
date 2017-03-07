@@ -501,3 +501,9 @@ INFO: 2 corrections made for group Z
 Nov 19, 2016 8:46:01 PM Main writeJsonToLocation
 SEVERE: Error writing json to file at C:\Users\Taylor\Research\data\TermCount\:
 java.io.FileNotFoundException: C:\Users\Taylor\Research\data\TermCount (Access is denied)
+Mar 07, 2017 6:36:18 PM Main categorizerMain
+INFO: 0 corrections made for group EY
+Mar 07, 2017 6:36:19 PM Main categorizerMain
+INFO: 2 corrections made for group M
+Mar 07, 2017 6:36:21 PM Main categorizerMain
+INFO: 11 corrections made for group N

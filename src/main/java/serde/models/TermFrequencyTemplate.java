@@ -3,7 +3,7 @@ package serde.models;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TermFrequencyTemplate extends LemmatizedFinalTemplate {
+public class TermFrequencyTemplate extends LemmatizedFinalTemplate implements TermFrequency {
   protected List<CountWord> termFrequencyList;
 
   public TermFrequencyTemplate() {}
@@ -30,5 +30,15 @@ public class TermFrequencyTemplate extends LemmatizedFinalTemplate {
 
   public void setTermFrequencyList(List<CountWord> termFrequencyList) {
     this.termFrequencyList = termFrequencyList;
+  }
+
+  public int alpha(String term) {
+    if (sportName.contains(term) ||
+        locationOfPlay.contains(term) ||
+        objectsUsed.contains(term)) {
+      return 2;
+    } else {
+      return 1;
+    }
   }
 }

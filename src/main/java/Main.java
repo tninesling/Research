@@ -42,8 +42,8 @@ public class Main {
   public static String[] groupNames = {"A", "AA", "AB", "AC", "AD", "AE", "AF",
           "AG", "AH", "AI", "AK", "AM", "AN", "AR", "AT", "AV", "AX", "AY", "B",
           "C", "D", "EA", "EB", "EC", "EF", "EG", "EH", "EJ", "EK", "EM", "EP",
-          "ER", "ES", "ET", "EX", "EZ", "F", "G", "H", "J", "K", "P", "R", "S",
-          "T", "U", "W", "X", "Y", "Z"};
+          "ER", "ES", "ET", "EX", "EY", "EZ", "F", "G", "H", "J", "K", "M", "N",
+          "P", "R", "S", "T", "U", "W", "X", "Y", "Z"};
 
   public static void main(String[] args) {
     setLogger(logLocation);

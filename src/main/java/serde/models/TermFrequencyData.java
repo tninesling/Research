@@ -2,7 +2,7 @@ package serde.models;
 
 import java.util.List;
 
-public class TermFrequencyData extends LemmatizedTokenData {
+public class TermFrequencyData extends LemmatizedTokenData implements TermFrequency {
   protected List<CountWord> termFrequencyList;
 
   public TermFrequencyData() {}
@@ -30,5 +30,9 @@ public class TermFrequencyData extends LemmatizedTokenData {
 
   public void setTermFrequencyList(List<CountWord> termFrequencyList) {
     this.termFrequencyList = termFrequencyList;
+  }
+
+  public int alpha(String term) {
+    return 1;
   }
 }

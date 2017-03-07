@@ -1,6 +1,7 @@
 package serde;
 
 import serde.models.CountWord;
+import serde.models.PostCountRankedCountWord;
 import serde.models.RankedCountWord;
 
 import com.fasterxml.jackson.core.JsonGenerator;
@@ -42,6 +43,21 @@ public class CountWordSerDe {
 
     return outArray;
   }
+
+  public static PostCountRankedCountWord[] parseCountWordJson(String jsonFileLocation, PostCountRankedCountWord[] outArray) {
+    File jsonFile = new File(jsonFileLocation);
+    try {
+      mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
+      outArray = mapper.readValue(jsonFile, outArray.getClass());
+    } catch (JsonParseException jpe) {
+      jpe.printStackTrace();
+    } catch (IOException ioe) {
+      ioe.printStackTrace();
+    }
+
+    return outArray;
+  }
+
 
   public static String countWordsToJson(CountWord[] countWordArray) {
     String mappedJsonString = "";

@@ -38,6 +38,7 @@ public class TermFrequencyMatrix {
       int index = getTermIndex(vocab, term.getWord());
       termEntry.add(Integer.toString(index));
       termEntry.add(Integer.toString(term.getCount()));
+      termEntry.add(Integer.toString(post.getNovelty()));
 
       // Only add the term if it is found in the ranked vocabulary
       if (index >= 0) {

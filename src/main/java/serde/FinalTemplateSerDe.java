@@ -2,6 +2,7 @@ package serde;
 
 import finalSportTemplate.TemplateNameFilter;
 import serde.models.FinalTemplate;
+import serde.models.TermFrequencyTemplate;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParseException;
@@ -160,6 +161,21 @@ public class FinalTemplateSerDe {
     try {
       mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
       templates = mapper.readValue(jsonFile, FinalTemplate[].class);
+    } catch (JsonParseException jpe) {
+      jpe.printStackTrace();
+    } catch (IOException ioe) {
+      ioe.printStackTrace();
+    }
+
+    return templates;
+  }
+
+  public TermFrequencyTemplate[] parseFrequencyTemplateJsonArray(String jsonFileLocation) {
+    TermFrequencyTemplate[] templates = new TermFrequencyTemplate[0];
+    File jsonFile = new File(jsonFileLocation);
+    try {
+      mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
+      templates = mapper.readValue(jsonFile, TermFrequencyTemplate[].class);
     } catch (JsonParseException jpe) {
       jpe.printStackTrace();
     } catch (IOException ioe) {

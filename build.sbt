@@ -4,7 +4,7 @@ version := "0.0.1-SNAPSHOT"
 
 lazy val root = (project in file("."))
 
-mainClass in (Compile, run) := Some("Main")
+mainClass in (Compile, run) := Some("tfIdfCalculator.TfIdfCalculator")
 
 // Allows forking, and expands JVM heap size to 2GB
 fork in run := true
