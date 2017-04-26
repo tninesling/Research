@@ -9,13 +9,18 @@ import scala.collection.JavaConversions._
 
 object TfIdfCalculator {
   def main(args: Array[String]) = {
-    List("AB", "AC", "AE", "AF", "AK", "AM", "AT", "EK", "ES", "EX", "K", "Z").foreach(topPosts)
+    List("A", "AA", "AB", "AC", "AD", "AE", "AF",
+         "AG", "AH", "AI", "AK", "AM", "AN", "AR", "AT", "AV", "AX", "AY", "B",
+         "C", "D", "EA", "EB", "EC", /*"ED", "EE",*/ "EF", "EG", "EH", "EJ", "EK",
+         "EM", /*"EN",*/ "EP", "ER", "ES", "ET", /*"EU",*/ "EX", "EY", "EZ", "F", "G",
+         "H", "J", "K", "M", "N", "P", "R", "S", "T", "U", "W", "X", "Y", "Z")
+         .foreach(name => topPosts(args(0), args(1), name))
   }
 
-  def topPosts(groupName: String) = {
-    val finalDocs = readFinalDocs(groupName)
-    val posts = readPosts(groupName)
-    val topNum = posts.size / 10
+  def topPosts(groupLocation: String, docLocation: String, groupName: String) = {
+    val finalDocs = readFinalDocs(docLocation, groupName)
+    val posts = readPosts(groupLocation, groupName)
+    val topNum = posts.size / 20
 
     println(groupName + ": " + topNum + " relevant posts:")
 
@@ -23,17 +28,15 @@ object TfIdfCalculator {
          .map(post => (post, cosineSimilarity(post, posts, finalDocs)))
          .sortWith((x, y) => x._2.compareTo(y._2) > 0) // sorts in descending order
          .take(topNum)
-         .foreach { x => println(x._1.getIndex)}//println(x._1.getContent + " " + "relevance: " + x._2 + "\n")}
+         .foreach { x => println(x._1.getIndex)}
   }
 
-  def readFinalDocs(groupName: String) = {
-    val docLocation = "C://Users//Taylor//Research//data//TermFrequencyTemplates//"
+  def readFinalDocs(docLocation: String, groupName: String) = {
     val serde = new FinalTemplateSerDe
     serde.parseFrequencyTemplateJsonArray(docLocation + groupName + "_frequency.json").toList
   }
 
-  def readPosts(groupName: String) = {
-    val groupLocation = "C://Users//Taylor//Research//data//TermFrequencyData//"
+  def readPosts(groupLocation: String, groupName: String) = {
     val serde = new SportsJsonSerDe
     serde.parseSportsJson(groupLocation + groupName + "_frequency.json", new Array[TermFrequencyData](0)).toList
   }
@@ -54,7 +57,12 @@ object TfIdfCalculator {
       tuple._2 * vec2map.getOrElse(tuple._1, 0.0)
     ).foldLeft(0.0)(sum)
 
-    dotProd / (magnitude(vec1.map(_._2)) * magnitude(vec2.map(_._2)))
+    val mag = magnitude(vec1.map(_._2)) * magnitude(vec2.map(_._2))
+
+    if (mag == 0)
+      0
+    else
+      dotProd / mag
   }
 
   def magnitude(vec: List[Double]): Double = {

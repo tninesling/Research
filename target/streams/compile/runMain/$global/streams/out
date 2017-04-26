@@ -1,1 +1,437 @@
-[0m[[0minfo[0m] [0mRunning Main updateVocab[0m
+[0m[[0minfo[0m] [0mRunning tfIdfCalculator.TfIdfCalculator C:/Users/Taylor/Research/data/TermFrequencyData/ C:/Users/Taylor/Research/data/TermFrequencyTemplates/[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/A_frequency.json[0m
+[0m[[0minfo[0m] [0m2[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/A_frequency.json[0m
+[0m[[0minfo[0m] [0m75[0m
+[0m[[0minfo[0m] [0mA: 3 relevant posts:[0m
+[0m[[0minfo[0m] [0m5[0m
+[0m[[0minfo[0m] [0m30[0m
+[0m[[0minfo[0m] [0m49[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/AA_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/AA_frequency.json[0m
+[0m[[0minfo[0m] [0m109[0m
+[0m[[0minfo[0m] [0mAA: 5 relevant posts:[0m
+[0m[[0minfo[0m] [0m44[0m
+[0m[[0minfo[0m] [0m93[0m
+[0m[[0minfo[0m] [0m47[0m
+[0m[[0minfo[0m] [0m29[0m
+[0m[[0minfo[0m] [0m61[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/AB_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/AB_frequency.json[0m
+[0m[[0minfo[0m] [0m98[0m
+[0m[[0minfo[0m] [0mAB: 4 relevant posts:[0m
+[0m[[0minfo[0m] [0m30[0m
+[0m[[0minfo[0m] [0m47[0m
+[0m[[0minfo[0m] [0m50[0m
+[0m[[0minfo[0m] [0m65[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/AC_frequency.json[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/AC_frequency.json[0m
+[0m[[0minfo[0m] [0m87[0m
+[0m[[0minfo[0m] [0mAC: 4 relevant posts:[0m
+[0m[[0minfo[0m] [0m15[0m
+[0m[[0minfo[0m] [0m53[0m
+[0m[[0minfo[0m] [0m54[0m
+[0m[[0minfo[0m] [0m61[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/AD_frequency.json[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/AD_frequency.json[0m
+[0m[[0minfo[0m] [0m66[0m
+[0m[[0minfo[0m] [0mAD: 3 relevant posts:[0m
+[0m[[0minfo[0m] [0m9[0m
+[0m[[0minfo[0m] [0m8[0m
+[0m[[0minfo[0m] [0m16[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/AE_frequency.json[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/AE_frequency.json[0m
+[0m[[0minfo[0m] [0m75[0m
+[0m[[0minfo[0m] [0mAE: 3 relevant posts:[0m
+[0m[[0minfo[0m] [0m31[0m
+[0m[[0minfo[0m] [0m8[0m
+[0m[[0minfo[0m] [0m51[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/AF_frequency.json[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/AF_frequency.json[0m
+[0m[[0minfo[0m] [0m84[0m
+[0m[[0minfo[0m] [0mAF: 4 relevant posts:[0m
+[0m[[0minfo[0m] [0m70[0m
+[0m[[0minfo[0m] [0m67[0m
+[0m[[0minfo[0m] [0m83[0m
+[0m[[0minfo[0m] [0m68[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/AG_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/AG_frequency.json[0m
+[0m[[0minfo[0m] [0m105[0m
+[0m[[0minfo[0m] [0mAG: 5 relevant posts:[0m
+[0m[[0minfo[0m] [0m66[0m
+[0m[[0minfo[0m] [0m37[0m
+[0m[[0minfo[0m] [0m18[0m
+[0m[[0minfo[0m] [0m74[0m
+[0m[[0minfo[0m] [0m63[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/AH_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/AH_frequency.json[0m
+[0m[[0minfo[0m] [0m89[0m
+[0m[[0minfo[0m] [0mAH: 4 relevant posts:[0m
+[0m[[0minfo[0m] [0m77[0m
+[0m[[0minfo[0m] [0m70[0m
+[0m[[0minfo[0m] [0m76[0m
+[0m[[0minfo[0m] [0m29[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/AI_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/AI_frequency.json[0m
+[0m[[0minfo[0m] [0m128[0m
+[0m[[0minfo[0m] [0mAI: 6 relevant posts:[0m
+[0m[[0minfo[0m] [0m0[0m
+[0m[[0minfo[0m] [0m43[0m
+[0m[[0minfo[0m] [0m2[0m
+[0m[[0minfo[0m] [0m65[0m
+[0m[[0minfo[0m] [0m40[0m
+[0m[[0minfo[0m] [0m84[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/AK_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/AK_frequency.json[0m
+[0m[[0minfo[0m] [0m47[0m
+[0m[[0minfo[0m] [0mAK: 2 relevant posts:[0m
+[0m[[0minfo[0m] [0m6[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/AM_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/AM_frequency.json[0m
+[0m[[0minfo[0m] [0m114[0m
+[0m[[0minfo[0m] [0mAM: 5 relevant posts:[0m
+[0m[[0minfo[0m] [0m39[0m
+[0m[[0minfo[0m] [0m34[0m
+[0m[[0minfo[0m] [0m26[0m
+[0m[[0minfo[0m] [0m22[0m
+[0m[[0minfo[0m] [0m110[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/AN_frequency.json[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/AN_frequency.json[0m
+[0m[[0minfo[0m] [0m43[0m
+[0m[[0minfo[0m] [0mAN: 2 relevant posts:[0m
+[0m[[0minfo[0m] [0m9[0m
+[0m[[0minfo[0m] [0m8[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/AR_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/AR_frequency.json[0m
+[0m[[0minfo[0m] [0m123[0m
+[0m[[0minfo[0m] [0mAR: 6 relevant posts:[0m
+[0m[[0minfo[0m] [0m80[0m
+[0m[[0minfo[0m] [0m83[0m
+[0m[[0minfo[0m] [0m53[0m
+[0m[[0minfo[0m] [0m60[0m
+[0m[[0minfo[0m] [0m96[0m
+[0m[[0minfo[0m] [0m82[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/AT_frequency.json[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/AT_frequency.json[0m
+[0m[[0minfo[0m] [0m90[0m
+[0m[[0minfo[0m] [0mAT: 4 relevant posts:[0m
+[0m[[0minfo[0m] [0m25[0m
+[0m[[0minfo[0m] [0m20[0m
+[0m[[0minfo[0m] [0m39[0m
+[0m[[0minfo[0m] [0m18[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/AV_frequency.json[0m
+[0m[[0minfo[0m] [0m2[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/AV_frequency.json[0m
+[0m[[0minfo[0m] [0m78[0m
+[0m[[0minfo[0m] [0mAV: 3 relevant posts:[0m
+[0m[[0minfo[0m] [0m1[0m
+[0m[[0minfo[0m] [0m76[0m
+[0m[[0minfo[0m] [0m39[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/AX_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/AX_frequency.json[0m
+[0m[[0minfo[0m] [0m61[0m
+[0m[[0minfo[0m] [0mAX: 3 relevant posts:[0m
+[0m[[0minfo[0m] [0m2[0m
+[0m[[0minfo[0m] [0m49[0m
+[0m[[0minfo[0m] [0m28[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/AY_frequency.json[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/AY_frequency.json[0m
+[0m[[0minfo[0m] [0m47[0m
+[0m[[0minfo[0m] [0mAY: 2 relevant posts:[0m
+[0m[[0minfo[0m] [0m7[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/B_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/B_frequency.json[0m
+[0m[[0minfo[0m] [0m53[0m
+[0m[[0minfo[0m] [0mB: 2 relevant posts:[0m
+[0m[[0minfo[0m] [0m20[0m
+[0m[[0minfo[0m] [0m29[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/C_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/C_frequency.json[0m
+[0m[[0minfo[0m] [0m127[0m
+[0m[[0minfo[0m] [0mC: 6 relevant posts:[0m
+[0m[[0minfo[0m] [0m90[0m
+[0m[[0minfo[0m] [0m53[0m
+[0m[[0minfo[0m] [0m26[0m
+[0m[[0minfo[0m] [0m29[0m
+[0m[[0minfo[0m] [0m30[0m
+[0m[[0minfo[0m] [0m105[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/D_frequency.json[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/D_frequency.json[0m
+[0m[[0minfo[0m] [0m53[0m
+[0m[[0minfo[0m] [0mD: 2 relevant posts:[0m
+[0m[[0minfo[0m] [0m0[0m
+[0m[[0minfo[0m] [0m1[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/EA_frequency.json[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/EA_frequency.json[0m
+[0m[[0minfo[0m] [0m103[0m
+[0m[[0minfo[0m] [0mEA: 5 relevant posts:[0m
+[0m[[0minfo[0m] [0m5[0m
+[0m[[0minfo[0m] [0m52[0m
+[0m[[0minfo[0m] [0m7[0m
+[0m[[0minfo[0m] [0m37[0m
+[0m[[0minfo[0m] [0m14[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/EB_frequency.json[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/EB_frequency.json[0m
+[0m[[0minfo[0m] [0m88[0m
+[0m[[0minfo[0m] [0mEB: 4 relevant posts:[0m
+[0m[[0minfo[0m] [0m17[0m
+[0m[[0minfo[0m] [0m47[0m
+[0m[[0minfo[0m] [0m18[0m
+[0m[[0minfo[0m] [0m52[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/EC_frequency.json[0m
+[0m[[0minfo[0m] [0m2[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/EC_frequency.json[0m
+[0m[[0minfo[0m] [0m80[0m
+[0m[[0minfo[0m] [0mEC: 4 relevant posts:[0m
+[0m[[0minfo[0m] [0m42[0m
+[0m[[0minfo[0m] [0m31[0m
+[0m[[0minfo[0m] [0m46[0m
+[0m[[0minfo[0m] [0m0[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/EF_frequency.json[0m
+[0m[[0minfo[0m] [0m2[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/EF_frequency.json[0m
+[0m[[0minfo[0m] [0m47[0m
+[0m[[0minfo[0m] [0mEF: 2 relevant posts:[0m
+[0m[[0minfo[0m] [0m2[0m
+[0m[[0minfo[0m] [0m38[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/EG_frequency.json[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/EG_frequency.json[0m
+[0m[[0minfo[0m] [0m35[0m
+[0m[[0minfo[0m] [0mEG: 1 relevant posts:[0m
+[0m[[0minfo[0m] [0m1[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/EH_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/EH_frequency.json[0m
+[0m[[0minfo[0m] [0m70[0m
+[0m[[0minfo[0m] [0mEH: 3 relevant posts:[0m
+[0m[[0minfo[0m] [0m0[0m
+[0m[[0minfo[0m] [0m2[0m
+[0m[[0minfo[0m] [0m31[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/EJ_frequency.json[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/EJ_frequency.json[0m
+[0m[[0minfo[0m] [0m94[0m
+[0m[[0minfo[0m] [0mEJ: 4 relevant posts:[0m
+[0m[[0minfo[0m] [0m66[0m
+[0m[[0minfo[0m] [0m91[0m
+[0m[[0minfo[0m] [0m89[0m
+[0m[[0minfo[0m] [0m69[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/EK_frequency.json[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/EK_frequency.json[0m
+[0m[[0minfo[0m] [0m50[0m
+[0m[[0minfo[0m] [0mEK: 2 relevant posts:[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0m5[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/EM_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/EM_frequency.json[0m
+[0m[[0minfo[0m] [0m51[0m
+[0m[[0minfo[0m] [0mEM: 2 relevant posts:[0m
+[0m[[0minfo[0m] [0m6[0m
+[0m[[0minfo[0m] [0m1[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/EP_frequency.json[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/EP_frequency.json[0m
+[0m[[0minfo[0m] [0m84[0m
+[0m[[0minfo[0m] [0mEP: 4 relevant posts:[0m
+[0m[[0minfo[0m] [0m2[0m
+[0m[[0minfo[0m] [0m1[0m
+[0m[[0minfo[0m] [0m56[0m
+[0m[[0minfo[0m] [0m60[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/ER_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/ER_frequency.json[0m
+[0m[[0minfo[0m] [0m97[0m
+[0m[[0minfo[0m] [0mER: 4 relevant posts:[0m
+[0m[[0minfo[0m] [0m58[0m
+[0m[[0minfo[0m] [0m7[0m
+[0m[[0minfo[0m] [0m28[0m
+[0m[[0minfo[0m] [0m59[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/ES_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/ES_frequency.json[0m
+[0m[[0minfo[0m] [0m52[0m
+[0m[[0minfo[0m] [0mES: 2 relevant posts:[0m
+[0m[[0minfo[0m] [0m0[0m
+[0m[[0minfo[0m] [0m12[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/ET_frequency.json[0m
+[0m[[0minfo[0m] [0m2[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/ET_frequency.json[0m
+[0m[[0minfo[0m] [0m65[0m
+[0m[[0minfo[0m] [0mET: 3 relevant posts:[0m
+[0m[[0minfo[0m] [0m10[0m
+[0m[[0minfo[0m] [0m39[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/EX_frequency.json[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/EX_frequency.json[0m
+[0m[[0minfo[0m] [0m95[0m
+[0m[[0minfo[0m] [0mEX: 4 relevant posts:[0m
+[0m[[0minfo[0m] [0m0[0m
+[0m[[0minfo[0m] [0m6[0m
+[0m[[0minfo[0m] [0m68[0m
+[0m[[0minfo[0m] [0m62[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/EY_frequency.json[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/EY_frequency.json[0m
+[0m[[0minfo[0m] [0m31[0m
+[0m[[0minfo[0m] [0mEY: 1 relevant posts:[0m
+[0m[[0minfo[0m] [0m16[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/EZ_frequency.json[0m
+[0m[[0minfo[0m] [0m2[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/EZ_frequency.json[0m
+[0m[[0minfo[0m] [0m60[0m
+[0m[[0minfo[0m] [0mEZ: 3 relevant posts:[0m
+[0m[[0minfo[0m] [0m22[0m
+[0m[[0minfo[0m] [0m24[0m
+[0m[[0minfo[0m] [0m6[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/F_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/F_frequency.json[0m
+[0m[[0minfo[0m] [0m55[0m
+[0m[[0minfo[0m] [0mF: 2 relevant posts:[0m
+[0m[[0minfo[0m] [0m28[0m
+[0m[[0minfo[0m] [0m15[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/G_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/G_frequency.json[0m
+[0m[[0minfo[0m] [0m77[0m
+[0m[[0minfo[0m] [0mG: 3 relevant posts:[0m
+[0m[[0minfo[0m] [0m64[0m
+[0m[[0minfo[0m] [0m37[0m
+[0m[[0minfo[0m] [0m58[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/H_frequency.json[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/H_frequency.json[0m
+[0m[[0minfo[0m] [0m80[0m
+[0m[[0minfo[0m] [0mH: 4 relevant posts:[0m
+[0m[[0minfo[0m] [0m68[0m
+[0m[[0minfo[0m] [0m78[0m
+[0m[[0minfo[0m] [0m12[0m
+[0m[[0minfo[0m] [0m37[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/J_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/J_frequency.json[0m
+[0m[[0minfo[0m] [0m66[0m
+[0m[[0minfo[0m] [0mJ: 3 relevant posts:[0m
+[0m[[0minfo[0m] [0m6[0m
+[0m[[0minfo[0m] [0m63[0m
+[0m[[0minfo[0m] [0m34[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/K_frequency.json[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/K_frequency.json[0m
+[0m[[0minfo[0m] [0m37[0m
+[0m[[0minfo[0m] [0mK: 1 relevant posts:[0m
+[0m[[0minfo[0m] [0m9[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/M_frequency.json[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/M_frequency.json[0m
+[0m[[0minfo[0m] [0m45[0m
+[0m[[0minfo[0m] [0mM: 2 relevant posts:[0m
+[0m[[0minfo[0m] [0m1[0m
+[0m[[0minfo[0m] [0m6[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/N_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/N_frequency.json[0m
+[0m[[0minfo[0m] [0m66[0m
+[0m[[0minfo[0m] [0mN: 3 relevant posts:[0m
+[0m[[0minfo[0m] [0m33[0m
+[0m[[0minfo[0m] [0m32[0m
+[0m[[0minfo[0m] [0m1[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/P_frequency.json[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/P_frequency.json[0m
+[0m[[0minfo[0m] [0m64[0m
+[0m[[0minfo[0m] [0mP: 3 relevant posts:[0m
+[0m[[0minfo[0m] [0m27[0m
+[0m[[0minfo[0m] [0m13[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/R_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/R_frequency.json[0m
+[0m[[0minfo[0m] [0m77[0m
+[0m[[0minfo[0m] [0mR: 3 relevant posts:[0m
+[0m[[0minfo[0m] [0m6[0m
+[0m[[0minfo[0m] [0m41[0m
+[0m[[0minfo[0m] [0m76[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/S_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/S_frequency.json[0m
+[0m[[0minfo[0m] [0m50[0m
+[0m[[0minfo[0m] [0mS: 2 relevant posts:[0m
+[0m[[0minfo[0m] [0m0[0m
+[0m[[0minfo[0m] [0m25[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/T_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/T_frequency.json[0m
+[0m[[0minfo[0m] [0m58[0m
+[0m[[0minfo[0m] [0mT: 2 relevant posts:[0m
+[0m[[0minfo[0m] [0m18[0m
+[0m[[0minfo[0m] [0m0[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/U_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/U_frequency.json[0m
+[0m[[0minfo[0m] [0m72[0m
+[0m[[0minfo[0m] [0mU: 3 relevant posts:[0m
+[0m[[0minfo[0m] [0m53[0m
+[0m[[0minfo[0m] [0m5[0m
+[0m[[0minfo[0m] [0m13[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/W_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/W_frequency.json[0m
+[0m[[0minfo[0m] [0m65[0m
+[0m[[0minfo[0m] [0mW: 3 relevant posts:[0m
+[0m[[0minfo[0m] [0m0[0m
+[0m[[0minfo[0m] [0m1[0m
+[0m[[0minfo[0m] [0m54[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/X_frequency.json[0m
+[0m[[0minfo[0m] [0m3[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/X_frequency.json[0m
+[0m[[0minfo[0m] [0m48[0m
+[0m[[0minfo[0m] [0mX: 2 relevant posts:[0m
+[0m[[0minfo[0m] [0m1[0m
+[0m[[0minfo[0m] [0m33[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/Y_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/Y_frequency.json[0m
+[0m[[0minfo[0m] [0m127[0m
+[0m[[0minfo[0m] [0mY: 6 relevant posts:[0m
+[0m[[0minfo[0m] [0m97[0m
+[0m[[0minfo[0m] [0m126[0m
+[0m[[0minfo[0m] [0m87[0m
+[0m[[0minfo[0m] [0m88[0m
+[0m[[0minfo[0m] [0m104[0m
+[0m[[0minfo[0m] [0m62[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyTemplates/Z_frequency.json[0m
+[0m[[0minfo[0m] [0m4[0m
+[0m[[0minfo[0m] [0mC:/Users/Taylor/Research/data/TermFrequencyData/Z_frequency.json[0m
+[0m[[0minfo[0m] [0m60[0m
+[0m[[0minfo[0m] [0mZ: 3 relevant posts:[0m
+[0m[[0minfo[0m] [0m11[0m
+[0m[[0minfo[0m] [0m43[0m
+[0m[[0minfo[0m] [0m15[0m

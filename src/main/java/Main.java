@@ -27,7 +27,7 @@ public class Main {
   private static String logLocation = "./logs/log.log";
 
   // private variables containing local directories of files
-  private static String sessionDataDirectoryLocation = "C:\\Users\\Taylor\\Research\\data\\SportsSessionData\\";
+  /*private static String sessionDataDirectoryLocation = "C:\\Users\\Taylor\\Research\\data\\SportsSessionData\\";
   private static String categoryCodingSheetLocation = "C:\\Users\\Taylor\\Research\\data\\Category_Coding.xlsx";
   private static String categorizedDataDirectoryLocation = "C:\\Users\\Taylor\\Research\\data\\CategorizedData\\";
   private static String spellCheckedDataDirectoryLocation = "C:\\Users\\Taylor\\Research\\data\\SpellCheckedData\\";
@@ -37,13 +37,13 @@ public class Main {
   private static String finalSportJsonLocation = "C:\\Users\\Taylor\\Research\\data\\FinalSportJson\\";
   private static String termCountLocation = "C:\\Users\\Taylor\\Research\\data\\TermFrequencyData\\";
   private static String termCountTemplateLocation = "C:\\Users\\Taylor\\Research\\data\\TermFrequencyTemplates\\";
-  private static String rankedVocabLocation = "C:\\Users\\Taylor\\Research\\data\\RankedVocab\\";
+  private static String rankedVocabLocation = "C:\\Users\\Taylor\\Research\\data\\RankedVocab\\";*/
 
   public static String[] groupNames = {"A", "AA", "AB", "AC", "AD", "AE", "AF",
           "AG", "AH", "AI", "AK", "AM", "AN", "AR", "AT", "AV", "AX", "AY", "B",
-          "C", "D", "EA", "EB", "EC", "EF", "EG", "EH", "EJ", "EK", "EM", "EP",
-          "ER", "ES", "ET", "EX", "EY", "EZ", "F", "G", "H", "J", "K", "M", "N",
-          "P", "R", "S", "T", "U", "W", "X", "Y", "Z"};
+          "C", "D", "EA", "EB", "EC", "ED", "EE", "EF", "EG", "EH", "EJ", "EK",
+          "EM", "EN", "EP", "ER", "ES", "ET", "EU", "EX", "EY", "EZ", "F", "G",
+          "H", "J", "K", "M", "N", "P", "R", "S", "T", "U", "W", "X", "Y", "Z"};
 
   public static void main(String[] args) {
     setLogger(logLocation);
@@ -54,52 +54,52 @@ public class Main {
     String[] newArgs = Arrays.copyOfRange(args, 1, args.length);
     switch (args[0]) {
       case "categorizer": {
-        newArgs = new String[] { sessionDataDirectoryLocation,
+        /*newArgs = new String[] { sessionDataDirectoryLocation,
                                  categoryCodingSheetLocation,
-                                 categorizedDataDirectoryLocation };
+                                 categorizedDataDirectoryLocation };*/
         categorizerMain(newArgs);
         break;
       }
       case "spellChecker": {
-        newArgs = new String[] { categorizedDataDirectoryLocation,
-                                 spellCheckedDataDirectoryLocation };
+        /*newArgs = new String[] { categorizedDataDirectoryLocation,
+                                 spellCheckedDataDirectoryLocation };*/
         spellCheckerMain(newArgs);
         break;
       }
       case "nlp": {
-        newArgs = new String[] { spellCheckedDataDirectoryLocation,
-                                 lemmatizedDataDirectoryLocation };
+        /*newArgs = new String[] { spellCheckedDataDirectoryLocation,
+                                 lemmatizedDataDirectoryLocation };*/
         nlpMain(newArgs);
         break;
       }
       case "finalSportParser": {
-        newArgs = new String[] { finalSportTemplateLocation,
+        /*newArgs = new String[] { finalSportTemplateLocation,
                                  finalSportTextLocation,
-                                 finalSportJsonLocation };
+                                 finalSportJsonLocation };*/
         finalSportMain(newArgs);
         break;
       }
       case "finalSportLemmatizeCount": {
-        newArgs = new String[] { finalSportJsonLocation,
-                                 termCountTemplateLocation };
+        /*newArgs = new String[] { finalSportJsonLocation,
+                                 termCountTemplateLocation };*/
         finalSportLemmatizeAndCount(newArgs);
         break;
       }
       case "termCounter": {
-        newArgs = new String[] { lemmatizedDataDirectoryLocation,
+        /*newArgs = new String[] { lemmatizedDataDirectoryLocation,
                                  termCountLocation,
-                                 rankedVocabLocation };
+                                 rankedVocabLocation };*/
         termCounterMain(newArgs);
         break;
       }
       case "matrixBuilder": {
-        newArgs = new String[] { termCountLocation,
-                                 rankedVocabLocation };
+        /*newArgs = new String[] { termCountLocation,
+                                 rankedVocabLocation };*/
         buildMatrix(newArgs);
         break;
       }
       case "updateVocab": {
-        newArgs = new String[] { rankedVocabLocation, rankedVocabLocation };
+        //newArgs = new String[] { rankedVocabLocation, rankedVocabLocation };
         addNumberOfPostsToVocabulary(newArgs);
         break;
       }

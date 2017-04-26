@@ -33,9 +33,11 @@ public class TermFrequencyTemplate extends LemmatizedFinalTemplate implements Te
   }
 
   public int alpha(String term) {
-    if (sportName.contains(term) ||
-        locationOfPlay.contains(term) ||
-        objectsUsed.contains(term)) {
+    if (sportName.toLowerCase().equals(term.toLowerCase())) {
+      return 10;
+    }
+    else if (locationOfPlay.contains(term) ||
+             objectsUsed.contains(term)) {
       return 2;
     } else {
       return 1;
