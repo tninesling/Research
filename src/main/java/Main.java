@@ -1,3 +1,5 @@
+package sportsdata;
+
 import categorizer.*;
 import finalSportTemplate.*;
 import nlp.*;

@@ -2,7 +2,7 @@ package tfIdfCalculator
 
 import serde._
 import serde.models._
-
+import sportsdata.Main
 import java.io.File
 
 import scala.collection.JavaConversions._
@@ -14,7 +14,43 @@ object TfIdfCalculator {
          "C", "D", "EA", "EB", "EC", /*"ED", "EE",*/ "EF", "EG", "EH", "EJ", "EK",
          "EM", /*"EN",*/ "EP", "ER", "ES", "ET", /*"EU",*/ "EX", "EY", "EZ", "F", "G",
          "H", "J", "K", "M", "N", "P", "R", "S", "T", "U", "W", "X", "Y", "Z")
-         .foreach(name => topPosts(args(0), args(1), name))
+         .foreach(name => addRelevanceToPosts(args(0), args(1), name, args(2)))
+  }
+
+  def addRelevanceToPosts(groupLocation: String, docLocation: String, groupName: String, outputLocation: String) = {
+    val posts = readPosts(groupLocation, groupName)
+    val relevantPosts = topPosts(groupLocation, docLocation, groupName)
+
+    val relPosts = posts.map { post =>
+      new RelevanceData(post, relevance(post, relevantPosts))
+    }
+
+    writePosts(relPosts, s"${outputLocation}${groupName}_relevance.json")
+  }
+
+  def relevance(post: TermFrequencyData, relevantPosts: List[TermFrequencyData]) = {
+    val relevantIndices = relevantPosts.map(_.getIndex)
+
+    if (relevantIndices.contains(post.getIndex))
+      1
+    else
+      0
+  }
+
+  def writePosts(posts: List[RelevanceData], outputLocation: String) = {
+    val serde = new SportsJsonSerDe
+    val postJson = serde.sportsDataToJson(posts.toArray)
+
+    Main.writeJsonToLocation(postJson, outputLocation)
+  }
+
+  /** Prints the number of relevant posts for each group as well as the indices
+   *  of the selected relevant posts
+   */
+  def printTopPosts(groupLocation: String, docLocation: String, groupName: String) = {
+    println(s"Relevant posts for group: ${groupName}")
+
+    topPosts(groupLocation, docLocation, groupName).map(_.getIndex).foreach(println)
   }
 
   def topPosts(groupLocation: String, docLocation: String, groupName: String) = {
@@ -22,13 +58,11 @@ object TfIdfCalculator {
     val posts = readPosts(groupLocation, groupName)
     val topNum = posts.size / 20
 
-    println(groupName + ": " + topNum + " relevant posts:")
-
     posts.filter(!_.getType.equals("v")) // remove votes which will have no frequent terms
          .map(post => (post, cosineSimilarity(post, posts, finalDocs)))
          .sortWith((x, y) => x._2.compareTo(y._2) > 0) // sorts in descending order
          .take(topNum)
-         .foreach { x => println(x._1.getIndex)}
+         .map(_._1) // select the post from the post, cosine similarity tuple
   }
 
   def readFinalDocs(docLocation: String, groupName: String) = {
